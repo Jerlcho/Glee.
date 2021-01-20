@@ -4,6 +4,10 @@ $accent: #436372;
 
 $title: #1a1a1a;
 
+$background: #fcd7b6;
+
+$buttons: #a3bbc8;
+
 %dmsans-400 {
   font-family: "DMSans-Regular", sans-serif;
   font-weight: 400;
@@ -37,4 +41,15 @@ $title: #1a1a1a;
 %rubik-700 {
   font-family: "Rubik-Bold", sans-serif;
   font-weight: 700;
+}
+
+%logo {
+  font-size: 36px;
+  color: $accent;
+  @extend %rubik-700;
+}
+
+%link {
+  text-decoration: none;
+  color: #7b7b7b;
 }

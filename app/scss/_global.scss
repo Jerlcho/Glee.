@@ -1,9 +1,32 @@
+html,
 body {
-  min-height: 100vh;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  @extend %rubik-400;
+  font-size: 16px;
+  color: $default;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 .container {
-  max-width: 1800px;
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.container-wide {
+  max-width: 1800px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
