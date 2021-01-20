@@ -1,0 +1,55 @@
+$default: #243f4d;
+
+$accent: #436372;
+
+$title: #1a1a1a;
+
+$background: #fcd7b6;
+
+$buttons: #a3bbc8;
+
+%dmsans-400 {
+  font-family: "DMSans-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%dmsans-500 {
+  font-family: "DMSans-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%dmsans-700 {
+  font-family: "DMSans-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%poppins-700 {
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%rubik-400 {
+  font-family: "Rubik-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%rubik-500 {
+  font-family: "Rubik-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: "Rubik-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%logo {
+  font-size: 36px;
+  color: $accent;
+  @extend %rubik-700;
+}
+
+%link {
+  text-decoration: none;
+  color: #7b7b7b;
+}
