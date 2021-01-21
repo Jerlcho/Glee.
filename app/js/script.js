@@ -3,5 +3,7 @@ $(function () {
     arrows: false,
     dots: true,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 5000
   });
 });

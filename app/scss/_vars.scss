@@ -53,3 +53,19 @@ $buttons: #a3bbc8;
   text-decoration: none;
   color: #7b7b7b;
 }
+
+%arrow {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 9px;
+  right: 18px;
+  top: 25px;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
