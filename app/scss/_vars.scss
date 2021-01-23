@@ -63,6 +63,29 @@ $buttons: #a3bbc8;
   top: 25px;
 }
 
+%title {
+  @extend %dmsans-700;
+  color: $title;
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+%filter-btn {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #8b8b8b;
+  @extend %dmsans-700;
+  margin-right: 15px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: $title;
+  }
+}
+
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 }
