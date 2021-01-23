@@ -256,8 +256,111 @@
     max-width: 196px;
   }
 }
+// ===============/features=======================
+
+.product {
+  &__inner {
+    padding-top: 75px;
+  }
+
+  &__top {
+    text-align: center;
+  }
+
+  &__filter-btn {
+    margin-bottom: 70px;
+  }
+
+  &__btn {
+    @extend %filter-btn;
+  }
+
+  &__btn--active {
+    color: $title;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px 30px;
+  }
+}
+.title {
+  @extend %title;
+}
+.product-item {
+  max-width: 270px;
+  &:hover {
+    .product-item__link-box {
+      transform: translateY(0%);
+    }
+  }
+  &__img-box {
+    position: relative;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 380px;
+    background-color: fff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    overflow: hidden;
+  }
+
+  &__images {
+    object-fit: cover;
+  }
+
+  &__link-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    bottom: 39.5%;
+    transform: translateY(600%);
+  }
+
+  &__link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    path {
+      transition: all 0.3s;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $buttons;
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  &__title {
+    margin: auto 0px 15px 0px;
+    @extend %dmsans-700;
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    color: $buttons;
+  }
+}
+
+// ===============/product========================
+
 .categories {
-  padding-top: 150px;
+  padding-top: 185px;
   &__items {
     display: flex;
   }
@@ -320,9 +423,81 @@
     }
   }
 }
-// ==================/products===================
+// ==================/categories===================
+
+.design {
+  padding-top: 100px;
+
+  &__top {
+    text-align: center;
+  }
+
+  &__title {
+    @extend %title;
+  }
+
+  &__filter-btn {
+    margin-bottom: 78px;
+  }
+
+  &__btn {
+    @extend %filter-btn;
+  }
+
+  &__btn--active {
+    color: $title;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.design-item {
+  max-width: 370px;
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.1);
+    transition: 1s ease;
+  }
+
+  &__img-box {
+    position: relative;
+    height: 246px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+  }
+
+  &__text-box {
+    padding: 40px 0px 0px 36px;
+    @extend %dmsans-700;
+  }
+
+  &__images {
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+  }
+
+  &__title {
+    max-width: 171px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: $title;
+    line-height: 25px;
+  }
+
+  &__style {
+    color: $buttons;
+  }
+}
+// ====================/design=====================
 
 .video {
+  padding-top: 120px;
   &__popup {
     display: flex;
     justify-content: center;
@@ -334,7 +509,6 @@
     background-repeat: no-repeat;
   }
 }
-
 // ===================/main=====================
 
 .footer-top {
