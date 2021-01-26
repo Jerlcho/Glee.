@@ -54,6 +54,7 @@ body {
       right: 6px;
     }
     &:last-child {
+      color: $background;
       padding-right: 0;
       &::after {
         content: "";
