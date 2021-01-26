@@ -108,6 +108,19 @@
 }
 // ===================/header=====================
 
+.top {
+  background-color: rgba(237, 241, 244, 0.6);
+  padding: 34px 0;
+  &__title {
+    line-height: 24px;
+    margin-bottom: 15px;
+    font-size: 36px;
+    text-align: center;
+    color: #222933;
+    @extend %rubik-300;
+  }
+}
+
 .top-slider {
   .top-slider__container {
     max-width: 1800px;
@@ -509,6 +522,147 @@
     background-repeat: no-repeat;
   }
 }
+// ====================/video=====================
+
+.blog {
+  padding-top: 115px;
+  margin-top: 450px;
+  background-color: rgba(252, 215, 182, 0.2);
+
+  &__inner {
+    margin-top: -450px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 24px 0 3px;
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    @extend %title;
+    margin-bottom: 0px;
+  }
+
+  &__top-btn {
+    text-decoration: none;
+    color: #262626;
+    @extend %dmsans-700;
+  }
+
+  &__top-link {
+    position: relative;
+    &::before {
+      content: "";
+      background-image: url("../images/icons/blog-arrow.svg");
+      background-repeat: no-repeat;
+      width: 7px;
+      height: 12px;
+      position: absolute;
+      top: 5px;
+      right: -24px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-item {
+  max-width: 370px;
+
+  &__img {
+    object-fit: cover;
+    height: 250px;
+  }
+
+  &__content {
+    background-color: #fff;
+    padding: 15px 55px 17px 31px;
+  }
+
+  &__btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    @extend %poppins-700;
+    color: #ffffff;
+    background-color: $buttons;
+    padding: 5px 31px;
+    border-radius: 35px;
+    position: relative;
+    top: -29px;
+  }
+
+  &__title-link {
+    text-decoration: none;
+    color: #262626;
+    @extend %dmsans-500;
+    font-size: 18px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    position: relative;
+    line-height: 22px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 315px;
+      height: 1px;
+      background-color: #e0e0e0;
+      top: 76px;
+      left: 0;
+    }
+  }
+
+  &__title-3 {
+    margin-bottom: 46px;
+  }
+
+  &__info {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #222933;
+    @extend %rubik-500;
+    display: flex;
+    line-height: 30px;
+  }
+
+  &__date {
+    margin-right: 15px;
+    align-items: center;
+  }
+
+  &__date-img {
+    vertical-align: middle;
+  }
+
+  &__user {
+    align-items: center;
+  }
+
+  &__user-img {
+    vertical-align: middle;
+  }
+
+  &__user-link {
+    text-decoration: none;
+    color: #222933;
+  }
+}
+.partners {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  // height: 160px;
+  padding: 90px 0;
+}
+
 // ===================/main=====================
 
 .footer-top {
@@ -651,5 +805,130 @@
     color: $background;
   }
 }
+// ==================/footer=======================
+
+.modal {
+  max-width: 505px;
+  padding: 115px 0 120px;
+  margin: 0 auto;
+  &__label {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: $accent;
+  }
+
+  &__label-position {
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    margin: 15px 0 25px;
+    height: 56px;
+    padding: 0 15px;
+  }
+
+  &__btn {
+    margin-top: 37px;
+    display: block;
+    width: 100%;
+    background-color: rgba(163, 187, 200, 0.7);
+    font-size: 18px;
+    @extend %rubik-500;
+    color: #fffefe;
+    border: none;
+    padding: 21px 0;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+  &__error {
+    color: $accent;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+  }
+
+  &__registr {
+    text-decoration: none;
+    color: $accent;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    display: block;
+    border-top: 2px solid #f6f6f6;
+    padding-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__create-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    @extend %rubik-500;
+    text-decoration: none;
+    font-size: 18px;
+    color: $default;
+    padding: 21px 0;
+    border: 3px solid rgba(163, 187, 200, 0.4);
+  }
+}
+
+.log__partners {
+  background-color: rgba(252, 215, 182, 0.2);
+  ul.log__partners-list {
+    padding: 82px 0px;
+  }
+}
+// ==================/login.html======================
+
+.information {
+  padding: 115px 0 20px;
+  &__items {
+  }
+
+  &__item {
+    margin-bottom: 70px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    line-height: 40px;
+    @extend %rubik-500;
+    margin-bottom: 20px;
+  }
+
+  &__title-type {
+    margin-bottom: 30px;
+  }
+
+  &__type {
+    padding-left: 30px;
+    list-style: decimal-leading-zero;
+  }
+
+  &__type-list {
+    margin: 0 -30px 30px 0;
+    padding-left: 10px;
+    line-height: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    line-height: 30px;
+  }
+}
+.container {
+}
+// ==================/conditions.html======================
 
 @import "media";
