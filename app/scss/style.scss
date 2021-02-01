@@ -307,12 +307,6 @@
 }
 .product-item {
   max-width: 270px;
-  &.product-item--list {
-    min-width: 100%;
-    .product-item__img-box {
-      height: 500px;
-    }
-  }
   &:hover {
     .product-item__link-box {
       transform: translateY(0%);
@@ -325,7 +319,6 @@
     align-items: center;
     flex-direction: column;
     height: 380px;
-    background-color: fff;
     border-radius: 10px;
     box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
     overflow: hidden;
@@ -1375,6 +1368,89 @@
 }
 
 // ==================/catalog.html======================
+
+.shop-content {
+  &__inner-list {
+  }
+}
+.product-item {
+  &__list {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 40px;
+    .product-item__img-box {
+      height: 500px;
+      width: 370px;
+    }
+
+    &__images {
+      height: 500px;
+      width: 370px;
+    }
+
+    .product-item__link-box {
+      position: inherit;
+      transform: translateY(0);
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .product-item__img-box {
+      box-shadow: none;
+      border: 3px solid #fafafa;
+      border-radius: 0;
+      padding: 80px 0;
+    }
+
+    .product-item__link {
+      border-radius: 0;
+      width: 50px;
+      height: 50px;
+      &:first-child {
+        display: none;
+      }
+    }
+
+    .product-item__link--active {
+      path {
+        fill: #ffffff;
+      }
+      background-color: $buttons;
+    }
+
+    .product-item__price {
+      font-size: 30px;
+      color: #333333;
+      line-height: 45px;
+      margin: 35px 0;
+    }
+
+    .product-item__title {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__content {
+    margin-left: 60px;
+    max-width: 440px;
+    padding: 90px 0 75px;
+    @extend %rubik-400;
+  }
+
+  &__descr {
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__title-link {
+    text-decoration: none;
+    @extend %rubik-400;
+    font-size: 40px;
+    color: #333333;
+  }
+}
+
+// ==================/catalog__list.html======================
 
 .details {
   padding: 120px 0 60px;
