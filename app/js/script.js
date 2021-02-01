@@ -1,4 +1,53 @@
 $(function () {
+
+  $('.details-item__num').styler();
+
+  $('.details-slide__thumb').slick({
+    asNavFor: '.details-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+    arrows: false
+  });
+
+  $('.details-slide__big').slick({
+    asNavFor: '.details-slide__thumb',
+    arrows: false,
+    draggable: false,
+    fade: true
+  });
+
+  $('.star').rateYo({
+    starWidth: "20px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+    spacing: "13px"
+  });
+
+  $('.filter-recent__content-rating').rateYo({
+    starWidth: "11px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+    spacing: "7px"
+  });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from + '.00');
+      $('.filter-price__to').text(data.to + '.00');
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from + '.00');
+      $('.filter-price__to').text(data.to + '.00');
+    },
+  });
+
   $('.top-slider__inner').slick({
     arrows: false,
     dots: true,

@@ -54,7 +54,7 @@ body {
       right: 6px;
     }
     &:last-child {
-      color: $background;
+      // color: $background;
       padding-right: 0;
       &::after {
         content: "";
@@ -64,5 +64,43 @@ body {
   &__link {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 107px 0 0px;
+  a {
+    text-decoration: none;
+    border: 1px solid $buttons;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  &__link {
+    width: 50px;
+    height: 50px;
+    color: $default;
+  }
+
+  &__link--active {
+    color: #ffffff;
+    background-color: $buttons;
+  }
+
+  &__next {
+    width: 74px;
+    height: 50px;
+    color: $default;
   }
 }
