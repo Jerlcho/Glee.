@@ -1369,15 +1369,14 @@
 
 // ==================/catalog.html======================
 
-.shop-content {
-  &__inner-list {
-  }
-}
 .product-item {
   &__list {
     display: flex;
     max-width: 100%;
     margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
     .product-item__img-box {
       height: 500px;
       width: 370px;
@@ -1453,7 +1452,7 @@
 // ==================/catalog__list.html======================
 
 .details {
-  padding: 120px 0 60px;
+  padding-top: 120px;
 }
 
 .details-item {
@@ -1654,9 +1653,104 @@
     color: inherit;
   }
 }
-.details-tab {
+
+.details-tabs {
+  padding: 100px 0 120px;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    @extend %rubik-500;
+    margin-bottom: 35px;
+    a {
+      text-decoration: none;
+      border-radius: 5px;
+      padding: 16px 0px;
+      width: 240px;
+      margin-right: 13px;
+      text-align: center;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__top-item {
+    color: $default;
+    background-color: rgba(163, 187, 200, 0.4);
+  }
+
+  &__top-item--active {
+    color: #fff;
+    background-color: $buttons;
+  }
+
+  &__content-item {
+    display: none;
+  }
+
+  &__content-item--active {
+    display: block;
+    line-height: 30px;
+  }
 }
-.details-description {
+
+.related {
+  &__title {
+    @extend %title;
+    margin-bottom: 75px;
+    color: $default;
+  }
+
+  &__items {
+    .product-item__img-box {
+      box-shadow: 0px 6px 47px -15px rgba(37, 37, 37, 0.05);
+    }
+
+    .slick-arrow {
+      font-size: 0;
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border: 2px solid #edf1f4;
+      border-radius: 5px;
+      position: absolute;
+      top: -120px;
+      right: 0px;
+      outline: none;
+      &:hover {
+        border: 2px solid $buttons;
+      }
+    }
+
+    .slick-prev {
+      right: 70px;
+    }
+
+    .slick-prev::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/slider-related/arrow-left.svg");
+      width: 22px;
+      height: 9px;
+      top: 44%;
+      left: 27%;
+    }
+
+    .slick-next::after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/slider-related/arrow-right.svg");
+      width: 22px;
+      height: 9px;
+      top: 44%;
+      left: 27%;
+    }
+
+    .slick-list.draggable {
+      padding-left: 12px;
+    }
+  }
 }
 
 // ==================/details.html======================

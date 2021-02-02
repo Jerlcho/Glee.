@@ -1,5 +1,20 @@
 $(function () {
 
+  $('.related__items').slick({
+    slidesToShow: 4,
+  });
+
+  $('.details-tabs__top-item').on('click', function (e) {
+    e.preventDefault;
+    $('.details-tabs__top-item').removeClass('details-tabs__top-item--active');
+    $(this).addClass('details-tabs__top-item--active');
+
+
+    $('.details-tabs__content-item').removeClass('details-tabs__content-item--active');
+    $($(this).attr('href')).addClass('details-tabs__content-item--active');
+    return false;
+  });
+
   $('.details-item__num').styler();
 
   $('.details-slide__thumb').slick({
