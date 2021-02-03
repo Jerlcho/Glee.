@@ -104,3 +104,10 @@ body {
     color: $default;
   }
 }
+
+.blog-page {
+  &__pagination {
+    padding: 0px 0px 50px;
+    justify-content: flex-start;
+  }
+}
