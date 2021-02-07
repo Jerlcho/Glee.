@@ -1,0 +1,70 @@
+.modal {
+  max-width: 505px;
+  padding: 115px 0 120px;
+  margin: 0 auto;
+  &__label {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: $accent;
+  }
+
+  &__label-position {
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    border: 2px solid #f6f6f6;
+    margin: 15px 0 25px;
+    height: 56px;
+    padding: 0 15px;
+  }
+
+  &__btn {
+    margin-top: 37px;
+    display: block;
+    width: 100%;
+    background-color: rgba(163, 187, 200, 0.7);
+    font-size: 18px;
+    @extend %rubik-500;
+    color: #fffefe;
+    border: none;
+    padding: 21px 0;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+
+  &__error {
+    color: $accent;
+    text-decoration: none;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+  }
+
+  &__registr {
+    text-decoration: none;
+    color: $accent;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    display: block;
+    border-top: 2px solid #f6f6f6;
+    padding-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__create-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    @extend %rubik-500;
+    text-decoration: none;
+    font-size: 18px;
+    color: $default;
+    padding: 21px 0;
+    border: 3px solid rgba(163, 187, 200, 0.4);
+  }
+}
