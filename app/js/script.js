@@ -1,5 +1,16 @@
 $(function () {
 
+  $('.menu__btn').on('click', function () {
+    // e.stopImmediatePropagation();
+    console.log("btn has been clicked");
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.footer-top__title').on('click', function () {
+    $(this).next().slideToggle();
+    $(this).toggleClass('active');
+  });
+
   $('.related__items').slick({
     slidesToShow: 4,
   });
@@ -104,4 +115,16 @@ $(function () {
       duration: 800
     }
   });
+
+  // let mixer1 = mixitup('.product__items', {
+  //   selectors: {
+  //     control: '.filter-1'
+  //   }
+  // });
+
+  // let mixer2 = mixitup('.design__items', {
+  //   selectors: {
+  //     control: '.filter-2'
+  //   }
+  // });
 });

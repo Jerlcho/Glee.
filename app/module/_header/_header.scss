@@ -4,10 +4,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__logo {
     margin-right: 150px;
+    z-index: 6;
   }
 
   &__logo-img {
@@ -20,6 +22,10 @@
 }
 
 .menu {
+  &__btn {
+    display: none;
+  }
+
   &__list {
     display: flex;
   }
@@ -102,5 +108,110 @@
     position: absolute;
     top: -17px;
     left: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__logo {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .menu {
+    order: 1;
+    margin-left: 25px;
+    &__list {
+      transform: translateY(-500%);
+      position: absolute;
+      top: 190px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      transition: all 0.3s;
+      background: linear-gradient(0deg, #424242, #ffffff);
+      &.menu__list--active {
+        transform: translateY(0);
+        transition: all 0.3s;
+      }
+    }
+
+    &__list-item + .menu__list-item {
+      padding-left: 15px;
+    }
+
+    &__list-item {
+      width: 100%;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    &__list-link {
+      padding: 12px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.3s ease;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-bottom: 1px solid $background;
+      }
+    }
+
+    &__btn {
+      width: 30px;
+      height: 22px;
+      border: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 0;
+      z-index: 6;
+      span {
+        width: 100%;
+        height: 3px;
+        background-color: $accent;
+      }
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: $accent;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &::before {
+        top: 0;
+      }
+    }
+  }
+  .user-nav {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    order: 0;
+  }
+  .user-nav {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 25px;
+    &__bundle {
+      margin: 0 10px;
+      padding: 22px 20px 8px 20px;
+    }
   }
 }
