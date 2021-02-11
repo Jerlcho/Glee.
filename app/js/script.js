@@ -1,7 +1,6 @@
 $(function () {
 
   $('.menu__btn').on('click', function () {
-    // e.stopImmediatePropagation();
     console.log("btn has been clicked");
     $('.menu__list').toggleClass('menu__list--active');
   });
@@ -116,15 +115,4 @@ $(function () {
     }
   });
 
-  // let mixer1 = mixitup('.product__items', {
-  //   selectors: {
-  //     control: '.filter-1'
-  //   }
-  // });
-
-  // let mixer2 = mixitup('.design__items', {
-  //   selectors: {
-  //     control: '.filter-2'
-  //   }
-  // });
 });
