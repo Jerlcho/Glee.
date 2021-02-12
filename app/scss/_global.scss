@@ -145,6 +145,14 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .log__partners {
+    ul.log__partners-list {
+      padding: 70px 0px;
+    }
+  }
+}
+
 @media (max-width: 575px) {
   .partners {
     padding: 60px 0;
