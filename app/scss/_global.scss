@@ -38,6 +38,7 @@ body {
 .breadcrumbs {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   &__list {
     display: flex;

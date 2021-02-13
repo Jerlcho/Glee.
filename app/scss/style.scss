@@ -312,6 +312,9 @@
     width: 270px;
     margin-right: 30px;
   }
+  &__filter-btn {
+    display: none;
+  }
 }
 
 .filter__title {
@@ -507,12 +510,14 @@
 }
 
 // ==================/catalog.html======================
-
+.product-item.product-item__list {
+  max-width: 100%;
+}
 .product-item {
   &__list {
     display: flex;
-    max-width: 100%;
     margin-bottom: 40px;
+
     &:last-child {
       margin-bottom: 0;
     }

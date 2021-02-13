@@ -1,8 +1,11 @@
 $(function () {
 
   $('.menu__btn').on('click', function () {
-    console.log("btn has been clicked");
     $('.menu__list').toggleClass('menu__list--active');
+  });
+
+  $('.shop__filter-btn').on('click', function () {
+    $('.shop__filters').slideToggle();
   });
 
   $('.footer-top__title').on('click', function () {
@@ -12,6 +15,29 @@ $(function () {
 
   $('.related__items').slick({
     slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 830,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
 
   $('.details-tabs__top-item').on('click', function (e) {
@@ -41,7 +67,15 @@ $(function () {
     asNavFor: '.details-slide__thumb',
     arrows: false,
     draggable: false,
-    fade: true
+    fade: true,
+    responsive: [
+      {
+        breakpoint: 868,
+        settings: {
+          draggable: true,
+        }
+      },
+    ]
   });
 
   $('.star').rateYo({
