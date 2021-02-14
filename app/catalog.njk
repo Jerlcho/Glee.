@@ -6,6 +6,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Glee.</title>
       <link rel="stylesheet" href="css/catalog.min.css">
+      <link rel="stylesheet" href="css/style.min.css">
+      <link rel="stylesheet" href="css/index.min.css">
    </head>
 
    <body>
@@ -33,6 +35,11 @@
          <section class="shop">
             <div class="container">
                <div class="shop__inner">
+                  <button class="shop__filter-btn">
+                     <svg width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+                        <path fill="#333333" d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"></path>
+                     </svg>
+                  </button>
                   <div class="shop__filters filter">
                      <div class="filter__item filter-category">
                         <h3 class="filter__title">
@@ -576,7 +583,6 @@
          </main>
          {% include 'app/module/_footer/_footer.html' %}
          <script src="js/script.min.js"></script>
-         <script src="js/script.js"></script>
       </body>
 
    </html>

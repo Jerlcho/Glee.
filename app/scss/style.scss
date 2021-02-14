@@ -312,6 +312,9 @@
     width: 270px;
     margin-right: 30px;
   }
+  &__filter-btn {
+    display: none;
+  }
 }
 
 .filter__title {
@@ -507,12 +510,14 @@
 }
 
 // ==================/catalog.html======================
-
+.product-item.product-item__list {
+  max-width: 100%;
+}
 .product-item {
   &__list {
     display: flex;
-    max-width: 100%;
     margin-bottom: 40px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -1002,7 +1007,7 @@
   &__img {
     width: 70px;
     height: 70px;
-    object-fit: cover;
+    object-fit: scale-down;
   }
 
   &__content-date {
@@ -1093,6 +1098,7 @@
 
     h5 {
       margin-bottom: 30px;
+      font-size: 18px;
       @extend %rubik-500;
     }
 
@@ -1115,6 +1121,7 @@
     padding: 25px 0 25px;
     border-top: 2px solid #ebebeb;
     border-bottom: 2px solid #ebebeb;
+    max-width: 870px;
     a {
       text-decoration: none;
     }
@@ -1304,7 +1311,8 @@
 
   &__textarea {
     margin-bottom: 40px;
-    width: 830px;
+    width: 100%;
+    max-width: 830px;
     height: 120px;
     resize: none;
     padding: 20px 50px 20px 20px;
