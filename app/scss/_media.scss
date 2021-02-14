@@ -1,3 +1,11 @@
+@media (max-width: 1230px) {
+  .information {
+    &__type-list {
+      margin-right: 0;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .blog-page {
     .filter-recent,
@@ -23,9 +31,7 @@
       width: 100%;
     }
   }
-}
 
-@media (max-width: 1200px) {
   .blog-one {
     .comments-children {
       &::before,
@@ -104,6 +110,75 @@
   .details-item__slide {
     width: auto;
     justify-content: center;
+  }
+
+  .mission {
+    &__inner {
+      display: block;
+      margin-bottom: 0;
+    }
+    &__img {
+      width: 575px;
+      height: 656px;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+    }
+    &__experience {
+      justify-content: center;
+    }
+    &__content {
+      padding: 70px 20px;
+    }
+    &__content-title {
+      text-align: center;
+    }
+    &__content-text {
+      &::after {
+        width: auto;
+        right: 0;
+      }
+    }
+  }
+
+  .info {
+    padding: 42px 0;
+    &__items {
+      flex-wrap: wrap;
+    }
+    &__item {
+      margin: 0 20px 20px 20px;
+      &:nth-child(2) {
+        svg {
+          height: 64px;
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .team {
+    padding-top: 60px;
+    &__inner {
+      display: block;
+    }
+    &__content {
+      max-width: 100%;
+      margin: 0 0 35px 0;
+    }
+    &__item {
+      display: grid;
+      justify-content: center;
+    }
+    &__content-text {
+      padding-right: 0;
+    }
+    &__content-title {
+      margin-bottom: 30px;
+      text-align: center;
+    }
   }
 }
 
@@ -209,6 +284,14 @@
   .details-tabs {
     padding-top: 70px;
   }
+
+  .mission {
+    padding-top: 60px;
+  }
+
+  .information {
+    padding-top: 60px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -219,6 +302,14 @@
     }
     &__img {
       height: 400px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .team {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
@@ -292,6 +383,18 @@
 
   .related {
     padding-top: 60px;
+  }
+
+  .mission {
+    &__statistics {
+      flex-wrap: wrap;
+    }
+    &__statistics-item {
+      margin: 0 15px 15px 0;
+      &::before {
+        display: none;
+      }
+    }
   }
 }
 
